@@ -1,410 +1,483 @@
+/* Moroccan Beauty Rituals — visual design */
+
 :root {
-  --cream: #f5efe6;
-  --paper: #fbf8f2;
-  --sand: #d8c1a4;
-  --terracotta: #a85f3f;
-  --brown: #4b2f20;
-  --olive: #60684b;
-  --ink: #2c211b;
-  --muted: #75695e;
-  --line: rgba(75, 47, 32, .16);
-  --white: #fffdf9;
+  --cream: #f7f2ea;
+  --ivory: #fcfaf6;
+  --sand: #dfd0bd;
+  --terracotta: #a96f58;
+  --deep: #332b25;
+  --muted: #746960;
+  --line: rgba(51, 43, 37, 0.12);
+  --white: #ffffff;
+  --max-width: 1180px;
   --serif: Georgia, "Times New Roman", serif;
-  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans: Arial, Helvetica, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ivory);
+  color: var(--deep);
   font-family: var(--sans);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-a { color: inherit; text-decoration: none; }
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+}
 
 .container {
-  width: min(1120px, calc(100% - 40px));
-  margin-inline: auto;
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
 }
 
-.narrow {
-  max-width: 760px;
-  text-align: center;
-}
+/* Header */
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(251, 248, 242, .94);
-  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 10;
+  background: rgba(252, 250, 246, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
-.nav-wrap {
-  min-height: 76px;
+.nav {
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 30px;
 }
 
 .brand {
+  color: var(--deep);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+nav {
   display: flex;
   align-items: center;
-  gap: 12px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.brand-mark {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--brown);
-  border-radius: 50%;
-  color: var(--terracotta);
-  font-size: 15px;
-}
-
-.brand strong {
-  display: block;
-  font-size: 13px;
-  letter-spacing: .13em;
-}
-
-.brand small {
-  display: block;
-  margin-top: 1px;
-  font-size: 9px;
-  letter-spacing: .35em;
-  color: var(--terracotta);
-}
-
-.nav {
-  display: flex;
   gap: 28px;
-  font-size: 13px;
-  letter-spacing: .05em;
 }
 
-.nav a:hover,
-.footer-links a:hover,
-.guide-links a:hover { color: var(--terracotta); }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--terracotta);
+}
+
+/* Hero */
 
 .hero {
-  position: relative;
-  min-height: 720px;
+  min-height: min(760px, calc(100vh - 78px));
   display: grid;
-  align-items: end;
-  overflow: hidden;
-  background: #c6a27e;
+  grid-template-columns: 1.08fr 0.92fr;
+  background: var(--cream);
 }
 
 .hero-image {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(40,25,16,.46), rgba(40,25,16,.08) 60%, rgba(40,25,16,.22)),
-    url("images/hero-moroccan.jpg") center/cover no-repeat;
+  min-height: 620px;
+  overflow: hidden;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(34,21,14,.66), transparent 62%);
+.hero-image img {
+  object-position: center;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  color: var(--white);
-  padding-top: 120px;
-  padding-bottom: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px clamp(42px, 7vw, 100px);
 }
 
 .eyebrow {
-  margin: 0 0 14px;
-  font-size: 11px;
+  margin: 0 0 18px;
+  color: var(--terracotta);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: .22em;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
-.hero h1 {
-  max-width: 720px;
+.hero h1,
+.section-heading h2,
+.feature-content h2,
+.about h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(56px, 8vw, 104px);
-  line-height: .9;
   font-weight: 400;
-  letter-spacing: -.045em;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
-.hero h1 em,
-.section-dark h2 em {
-  font-style: italic;
-  font-weight: 400;
+.hero h1 {
+  max-width: 560px;
+  font-size: clamp(3rem, 5vw, 5.4rem);
 }
 
-.hero-copy {
-  max-width: 500px;
-  margin: 28px 0;
-  font-size: 18px;
+.hero p:not(.eyebrow) {
+  max-width: 510px;
+  margin: 28px 0 34px;
+  color: var(--muted);
+  font-size: 1rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 24px;
-  border-radius: 999px;
-  font-size: 12px;
+  width: fit-content;
+  min-height: 50px;
+  padding: 0 27px;
+  background: var(--deep);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: .09em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: transform .2s ease, background .2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.button:hover { transform: translateY(-2px); }
-.button-light { background: var(--white); color: var(--brown); }
-
-.section { padding: 100px 0; }
-.section-soft { background: var(--cream); }
-.section-dark { background: var(--brown); color: var(--white); }
-
-.intro p:last-child {
-  margin: 0;
-  color: var(--muted);
-  font-size: 18px;
+.button:hover {
+  background: var(--terracotta);
+  transform: translateY(-2px);
 }
 
-h2 {
-  margin: 0 0 20px;
-  font-family: var(--serif);
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -.035em;
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--deep);
+  color: var(--deep);
+}
+
+.button.secondary:hover {
+  color: var(--white);
+}
+
+/* Sections */
+
+.section {
+  padding: 110px 0;
 }
 
 .section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 42px;
+  max-width: 700px;
+  margin-bottom: 52px;
 }
 
-.section-heading > p {
-  max-width: 320px;
-  margin: 0;
+.section-heading h2,
+.feature-content h2,
+.about h2 {
+  font-size: clamp(2.35rem, 4vw, 4rem);
+}
+
+.section-heading > p:last-child {
+  max-width: 620px;
+  margin: 22px 0 0;
   color: var(--muted);
 }
 
-.card-grid {
+/* Ritual cards */
+
+.ritual-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 54px 30px;
 }
 
-.ritual-card {
-  background: var(--paper);
+.card {
+  min-width: 0;
+  background: var(--white);
+  overflow: hidden;
   border: 1px solid var(--line);
-  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.ritual-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 50px rgba(75,47,32,.12);
+.card > img {
+  aspect-ratio: 2 / 3;
+  transition: transform 0.6s ease;
 }
 
-.card-image {
-  aspect-ratio: 4 / 3;
-  background-position: center;
-  background-size: cover;
+.card:hover > img {
+  transform: scale(1.025);
 }
 
-.card-image.argan {
-  background-image: url("images/argan-oil.jpg");
-  background-color: #c9a16e;
+.card-content {
+  padding: 28px 28px 30px;
 }
 
-.card-image.ghassoul {
-  background-image: url("images/ghassoul.jpg");
-  background-color: #b99d80;
-}
-
-.card-image.hammam {
-  background-image: url("images/hammam.jpg");
-  background-color: #9d8975;
-}
-
-.card-image.rose {
-  background-image: url("images/rose-water.jpg");
-  background-color: #b48a78;
-}
-
-.card-body { padding: 26px 28px 30px; }
-
-.card-body > span:first-child {
-  color: var(--terracotta);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .16em;
-}
-
-.card-body h3 {
-  margin: 8px 0;
+.card h3 {
+  margin: 0 0 8px;
   font-family: var(--serif);
-  font-size: 31px;
+  font-size: 1.65rem;
   font-weight: 400;
 }
 
-.card-body p {
+.card p {
   margin: 0 0 18px;
   color: var(--muted);
+  font-size: 0.92rem;
 }
 
-.read-more {
-  font-size: 11px;
+.card a {
+  color: var(--terracotta);
+  text-decoration: none;
+  font-size: 0.73rem;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.ingredient-list {
-  border-top: 1px solid var(--line);
+.card a::after {
+  content: "  →";
 }
 
-.ingredient {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 30px;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--line);
+/* Ingredients feature */
+
+.feature-section {
+  padding: 110px 0;
+  background: var(--cream);
 }
 
-.number {
-  color: var(--terracotta);
-  font-family: var(--serif);
-  font-size: 22px;
-}
-
-.ingredient h3 {
-  margin: 0 0 5px;
-  font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.ingredient p { margin: 0; color: var(--muted); }
-
-.guide-layout {
+.feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  align-items: center;
+  gap: clamp(45px, 8vw, 110px);
 }
 
-.section-dark .eyebrow { color: #d9b896; }
-
-.guide-copy > p {
-  margin: 0 0 28px;
-  color: #e8ded4;
-  font-size: 18px;
+.feature-image {
+  min-height: 680px;
+  overflow: hidden;
 }
 
-.guide-links { border-top: 1px solid rgba(255,255,255,.2); }
-
-.guide-links a {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+.feature-content {
+  max-width: 530px;
 }
 
-.about { background: #eee4d7; }
+.feature-content p:not(.eyebrow) {
+  margin: 26px 0 34px;
+  color: var(--muted);
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  background: var(--ivory);
+}
+
+.narrow {
+  max-width: 800px;
+}
 
 .about p:last-child {
+  max-width: 670px;
+  margin: 26px auto 0;
   color: var(--muted);
-  font-size: 18px;
 }
 
-.site-footer {
-  background: #211812;
-  color: #e9ddd0;
-  padding: 55px 0 24px;
+/* Detail anchors */
+
+.ritual-notes {
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
 }
 
-.footer-wrap strong {
+.notes-grid > div {
+  padding: 30px;
+  background: var(--white);
+}
+
+.notes-grid h3 {
+  margin: 0 0 8px;
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 1.35rem;
   font-weight: 400;
 }
 
-.footer-wrap p {
-  margin: 4px 0 0;
-  color: #a99b90;
-  font-size: 13px;
+.notes-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
 }
 
-.footer-links {
+/* Footer */
+
+.site-footer {
+  background: var(--deep);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-inner {
+  min-height: 95px;
   display: flex;
-  gap: 24px;
-  font-size: 13px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.copyright {
-  margin-top: 48px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,.12);
-  color: #81756d;
-  font-size: 11px;
+.footer-inner p {
+  margin: 0;
+  font-size: 0.75rem;
 }
 
-@media (max-width: 760px) {
-  .container { width: min(100% - 28px, 1120px); }
+.footer-inner a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.75rem;
+}
 
-  .nav { display: none; }
+.footer-inner a:hover {
+  color: var(--white);
+}
 
-  .hero { min-height: 650px; }
+/* Responsive */
 
-  .hero-content { padding-bottom: 48px; }
-
-  .hero h1 { font-size: clamp(52px, 15vw, 78px); }
-
-  .section { padding: 72px 0; }
-
-  .section-heading {
-    display: block;
-    margin-bottom: 30px;
+@media (max-width: 850px) {
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
   }
 
-  .section-heading > p { margin-top: 18px; }
+  .nav {
+    min-height: 70px;
+  }
 
-  .card-grid,
-  .guide-layout { grid-template-columns: 1fr; }
+  .brand {
+    font-size: 1.15rem;
+  }
 
-  .guide-layout { gap: 42px; }
+  nav {
+    gap: 16px;
+  }
 
-  .ingredient { grid-template-columns: 55px 1fr; gap: 15px; }
+  nav a {
+    font-size: 0.67rem;
+  }
 
-  .footer-wrap { display: block; }
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
-  .footer-links { margin-top: 25px; }
+  .hero-image {
+    min-height: 62vh;
+    max-height: 680px;
+  }
+
+  .hero-content {
+    padding: 64px 24px 76px;
+  }
+
+  .ritual-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 600px;
+  }
+
+  .feature-content {
+    max-width: none;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(calc(100% - 24px), var(--max-width));
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    min-height: 540px;
+  }
+
+  .hero-content {
+    padding: 55px 18px 65px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section,
+  .feature-section {
+    padding: 75px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .ritual-grid {
+    gap: 28px;
+  }
+
+  .card-content {
+    padding: 23px;
+  }
+
+  .feature-image {
+    min-height: 500px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    min-height: 120px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
