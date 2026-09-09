@@ -1,14 +1,14 @@
-# Moroccan Beauty Rituals — starter mini-site
+# Moroccan Beauty Rituals — web v1
 
-Files:
-- index.html — public landing page
-- privacy-policy.html — starter privacy policy
-- styles.css — visual styling
+Replace the existing `index.html` and `styles.css` in the GitHub repository with these files.
 
-Next:
-1. Deploy these files to a public HTTPS URL.
-2. Replace any business/contact details with your real details.
-3. Use the public homepage URL as the Pinterest app website.
-4. Use /privacy-policy.html as the Pinterest privacy-policy URL.
+Create an `images` folder and upload:
+- hero-moroccan.jpg
+- argan-oil.jpg
+- ghassoul.jpg
+- hammam.jpg
+- rose-water.jpg
 
-The privacy policy is a starter template, not legal advice.
+If those image files are not uploaded yet, the site still loads; the image areas will show their fallback background colors.
+
+The design is responsive and intentionally lightweight for GitHub Pages.

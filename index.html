@@ -1,78 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Moroccan Beauty Rituals</title>
-  <meta name="description" content="Moroccan-inspired beauty, skincare, haircare and self-care rituals, inspired by traditional ingredients and modern routines.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moroccan Beauty Rituals — an editorial guide to traditional Moroccan beauty rituals, ingredients and self-care.">
+  <meta name="theme-color" content="#f5efe6">
+  <title>Moroccan Beauty Rituals | Traditional Moroccan Beauty & Self-Care</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Moroccan Beauty Rituals</a>
-      <nav>
-        <a href="#about">About</a>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Moroccan Beauty Rituals home">
+        <span class="brand-mark">✦</span>
+        <span>
+          <strong>Moroccan Beauty</strong>
+          <small>RITUALS</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
         <a href="#rituals">Rituals</a>
-        <a href="privacy-policy.html">Privacy</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#guides">Guides</a>
+        <a href="#about">About</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">MOROCCAN-INSPIRED BEAUTY</p>
-        <h1>Ancient rituals.<br>Modern beauty.</h1>
-        <p class="lead">Discover Moroccan-inspired skincare, haircare and self-care rituals featuring timeless ingredients such as argan oil, ghassoul, black soap and rose water.</p>
-        <a class="button" href="#rituals">Explore the rituals</a>
+      <div class="hero-image" role="img" aria-label="Moroccan beauty ritual with argan oil, rose petals and traditional ceramics"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">TRADITION • BEAUTY • SELF-CARE</p>
+        <h1>The Moroccan<br><em>Beauty Ritual</em></h1>
+        <p class="hero-copy">
+          Discover the ingredients, traditions and slow beauty rituals inspired by Morocco.
+        </p>
+        <a class="button button-light" href="#rituals">Explore the rituals</a>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section class="intro section">
       <div class="container narrow">
-        <p class="eyebrow">OUR APPROACH</p>
-        <h2>Beauty inspired by Morocco</h2>
-        <p>Moroccan Beauty Rituals is a content and inspiration brand dedicated to beauty routines, natural ingredients, traditional hammam-inspired practices and thoughtfully curated beauty finds.</p>
-        <p>We create educational and inspirational content for people who want simple, beautiful rituals they can adapt to their own routines.</p>
+        <p class="eyebrow">A MODERN EDITORIAL GUIDE</p>
+        <h2>Ancient traditions, thoughtfully rediscovered.</h2>
+        <p>
+          Moroccan beauty is rooted in simple ingredients, sensory rituals and generations
+          of knowledge. We explore the stories behind argan oil, ghassoul clay, rose water,
+          black soap, henna and the hammam — and how these traditions can inspire a modern
+          self-care routine.
+        </p>
       </div>
     </section>
 
-    <section id="rituals" class="section soft">
+    <section id="rituals" class="section section-soft">
       <div class="container">
-        <p class="eyebrow">EXPLORE</p>
-        <h2>Discover your next ritual</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Skincare rituals</h3>
-            <p>Cleansing, exfoliation, hydration and ingredient-led routines inspired by Moroccan traditions.</p>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE RITUALS</p>
+            <h2>Beauty, one ritual at a time.</h2>
+          </div>
+          <p>Explore the traditions that define Moroccan self-care.</p>
+        </div>
+
+        <div class="card-grid">
+          <a class="ritual-card featured" href="#argan">
+            <div class="card-image argan"></div>
+            <div class="card-body">
+              <span>01 • OIL</span>
+              <h3>The Argan Oil Ritual</h3>
+              <p>From the argan tree to a timeless beauty ritual.</p>
+              <span class="read-more">Discover →</span>
+            </div>
+          </a>
+
+          <a class="ritual-card" href="#ghassoul">
+            <div class="card-image ghassoul"></div>
+            <div class="card-body">
+              <span>02 • CLAY</span>
+              <h3>Ghassoul Clay</h3>
+              <p>A mineral-rich Moroccan clay traditionally used in beauty rituals.</p>
+              <span class="read-more">Discover →</span>
+            </div>
+          </a>
+
+          <a class="ritual-card" href="#hammam">
+            <div class="card-image hammam"></div>
+            <div class="card-body">
+              <span>03 • BATH</span>
+              <h3>The Moroccan Hammam</h3>
+              <p>A slow bathing ritual built around warmth, cleansing and renewal.</p>
+              <span class="read-more">Discover →</span>
+            </div>
+          </a>
+
+          <a class="ritual-card" href="#rose-water">
+            <div class="card-image rose"></div>
+            <div class="card-body">
+              <span>04 • BOTANICAL</span>
+              <h3>Rose Water</h3>
+              <p>A fragrant botanical tradition woven into Moroccan beauty.</p>
+              <span class="read-more">Discover →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ingredients" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE INGREDIENTS</p>
+            <h2>The Moroccan beauty cabinet.</h2>
+          </div>
+        </div>
+
+        <div class="ingredient-list">
+          <article class="ingredient">
+            <span class="number">01</span>
+            <div>
+              <h3>Argan Oil</h3>
+              <p>A traditional Moroccan botanical oil used in skin and hair care.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Haircare rituals</h3>
-            <p>Ideas for nourishing, conditioning and caring for hair with Moroccan-inspired ingredients.</p>
+          <article class="ingredient">
+            <span class="number">02</span>
+            <div>
+              <h3>Ghassoul</h3>
+              <p>Mineral clay associated with traditional Moroccan cleansing rituals.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Hammam & self-care</h3>
-            <p>Slow beauty, body care and relaxing rituals inspired by the Moroccan hammam experience.</p>
+          <article class="ingredient">
+            <span class="number">03</span>
+            <div>
+              <h3>Rose Water</h3>
+              <p>Aromatic rose distillate used in Moroccan beauty and sensory rituals.</p>
+            </div>
+          </article>
+          <article class="ingredient">
+            <span class="number">04</span>
+            <div>
+              <h3>Black Soap</h3>
+              <p>A traditional hammam staple used as part of the cleansing ritual.</p>
+            </div>
+          </article>
+          <article class="ingredient">
+            <span class="number">05</span>
+            <div>
+              <h3>Henna</h3>
+              <p>A plant-based tradition with deep cultural roots across Morocco.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container narrow callout">
-        <p class="eyebrow">PINTEREST</p>
-        <h2>Follow Moroccan Beauty Rituals</h2>
-        <p>Find our latest visual guides, beauty ideas, routines and curated inspiration on Pinterest.</p>
-        <a class="button" href="https://www.pinterest.com/moroccanbeautyrituals/" target="_blank" rel="noopener">Visit Pinterest</a>
+    <section id="guides" class="section section-dark">
+      <div class="container guide-layout">
+        <div>
+          <p class="eyebrow">BEAUTY GUIDES</p>
+          <h2>Small rituals.<br><em>Beautiful routines.</em></h2>
+        </div>
+        <div class="guide-copy">
+          <p>
+            Our guides turn traditional Moroccan beauty practices into easy-to-explore
+            stories for modern self-care.
+          </p>
+          <div class="guide-links">
+            <a href="#argan">The Argan Oil Ritual <span>→</span></a>
+            <a href="#hammam">Inside the Moroccan Hammam <span>→</span></a>
+            <a href="#ghassoul">A Beginner's Guide to Ghassoul <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container narrow">
+        <p class="eyebrow">MOROCCAN BEAUTY RITUALS</p>
+        <h2>A quiet place for Moroccan beauty traditions.</h2>
+        <p>
+          We are building an independent editorial guide dedicated to Moroccan beauty,
+          ingredients and self-care traditions. Our goal is to make these rituals easier
+          to discover while respecting their cultural roots.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <span>© 2026 Moroccan Beauty Rituals</span>
-      <a href="privacy-policy.html">Privacy Policy</a>
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Moroccan Beauty Rituals</strong>
+        <p>Traditional beauty, modern self-care.</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      © 2026 Moroccan Beauty Rituals. Editorial project.
     </div>
   </footer>
 </body>
