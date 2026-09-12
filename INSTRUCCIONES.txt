@@ -1,0 +1,31 @@
+CAMBIO PARA LAS PÁGINAS DE ARTÍCULOS
+
+1. Sube `article-pages.css` a la raíz del repositorio, junto a `styles.css`.
+
+2. En CADA uno de estos 6 archivos:
+   content/articles/argan-oil.html
+   content/articles/rose-water.html
+   content/articles/ghassoul.html
+   content/articles/moroccan-hammam.html
+   content/articles/henna.html
+   content/articles/sidr-hair-care.html
+
+   busca:
+   <link rel="stylesheet" href="../../styles.css">
+
+   e inmediatamente después añade:
+   <link rel="stylesheet" href="../../article-pages.css">
+
+3. El HTML del artículo debe usar estas clases:
+   <body class="article-page">
+   <main class="article-container">
+   <header class="article-header">...</header>
+   <div class="article-image">...</div>
+   <div class="article-content">...</div>
+   </main>
+
+IMPORTANTE:
+- NO reemplaces styles.css.
+- NO modifiques index.html.
+- NO modifiques las imágenes.
+- El nuevo CSS solo añade el diseño de las páginas de artículos.
