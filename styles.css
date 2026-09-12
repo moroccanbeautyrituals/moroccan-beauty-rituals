@@ -216,14 +216,34 @@ nav a:hover {
   background: var(--white);
   overflow: hidden;
   border: 1px solid var(--line);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card > img {
-  aspect-ratio: 2 / 3;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(51, 43, 37, 0.08);
+}
+
+/* Entire card is clickable */
+
+.card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smaller ritual images */
+
+.card-link > img {
+  width: 100%;
+  height: 330px;
+  aspect-ratio: auto;
+  object-fit: cover;
   transition: transform 0.6s ease;
 }
 
-.card:hover > img {
+.card:hover .card-link > img {
   transform: scale(1.025);
 }
 
@@ -244,17 +264,12 @@ nav a:hover {
   font-size: 0.92rem;
 }
 
-.card a {
+.card-cta {
   color: var(--terracotta);
-  text-decoration: none;
   font-size: 0.73rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.card a::after {
-  content: "  →";
 }
 
 /* Ingredients feature */
@@ -300,39 +315,6 @@ nav a:hover {
   max-width: 670px;
   margin: 26px auto 0;
   color: var(--muted);
-}
-
-/* Detail anchors */
-
-.ritual-notes {
-  padding-top: 30px;
-  padding-bottom: 100px;
-}
-
-.notes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-
-.notes-grid > div {
-  padding: 30px;
-  background: var(--white);
-}
-
-.notes-grid h3 {
-  margin: 0 0 8px;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 400;
-}
-
-.notes-grid p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.86rem;
 }
 
 /* Footer */
@@ -406,16 +388,16 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
+  .card-link > img {
+    height: 360px;
+  }
+
   .feature-image {
     min-height: 600px;
   }
 
   .feature-content {
     max-width: none;
-  }
-
-  .notes-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -462,16 +444,16 @@ nav a:hover {
     gap: 28px;
   }
 
+  .card-link > img {
+    height: 270px;
+  }
+
   .card-content {
     padding: 23px;
   }
 
   .feature-image {
     min-height: 500px;
-  }
-
-  .notes-grid {
-    grid-template-columns: 1fr;
   }
 
   .footer-inner {
