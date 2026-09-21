@@ -33,7 +33,7 @@ body {
 img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -93,6 +93,7 @@ nav a:hover {
 /* Hero */
 
 .hero {
+  height: min(760px, calc(100vh - 78px));
   min-height: min(760px, calc(100vh - 78px));
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
@@ -100,7 +101,8 @@ nav a:hover {
 }
 
 .hero-image {
-  min-height: 620px;
+  min-height: 0;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -282,13 +284,19 @@ nav a:hover {
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 680px;
   align-items: center;
   gap: clamp(45px, 8vw, 110px);
 }
 
 .feature-image {
-  min-height: 680px;
+  min-height: 0;
+  height: 680px;
   overflow: hidden;
+}
+
+.feature-image img {
+  height: 100%;
 }
 
 .feature-content {
@@ -371,6 +379,8 @@ nav a:hover {
   }
 
   .hero {
+    height: auto;
+    min-height: 0;
     grid-template-columns: 1fr;
   }
 
@@ -393,6 +403,7 @@ nav a:hover {
   }
 
   .feature-image {
+    height: 600px;
     min-height: 600px;
   }
 
@@ -415,8 +426,13 @@ nav a:hover {
   }
 
   nav {
-    gap: 14px;
+    gap: 8px;
     flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-image {
@@ -453,6 +469,7 @@ nav a:hover {
   }
 
   .feature-image {
+    height: 500px;
     min-height: 500px;
   }
 
